@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gRj-gv-Wtj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title Screen-->
+        <scene sceneID="6T7-BD-VJL">
+            <objects>
+                <viewController storyboardIdentifier="TitleScreen" id="gRj-gv-Wtj" customClass="TitleScreen" customModule="Banana_Market_Remake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b2p-vE-JL6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ljl-HF-OQP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.80687958002090454" green="0.87114745378494263" blue="0.56547778844833374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="372-q4-aSv">
+                                <rect key="frame" x="24" y="473" width="327" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="K4P-ty-HFe"/>
+                                </constraints>
+                                <state key="normal" image="7DayButtonScreen1.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="yIg-uZ-bZJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yA-mH-qpZ">
+                                <rect key="frame" x="24" y="552" width="327" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="aNF-Ow-wHo"/>
+                                </constraints>
+                                <state key="normal" image="UnlimitedButton.png"/>
+                                <connections>
+                                    <segue destination="rFz-fu-2pP" kind="presentation" id="S3W-0u-G5j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oE3-Qq-jet">
+                                <rect key="frame" x="16" y="35" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="How to Play" image="002.png"/>
+                                <connections>
+                                    <action selector="howToPlayButton:" destination="gRj-gv-Wtj" eventType="touchUpInside" id="bPz-Qf-b5S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3d-B3-fuu">
+                                <rect key="frame" x="117" y="631" width="141" height="29"/>
+                                <color key="backgroundColor" red="0.89069831371307373" green="0.71253126859664917" blue="0.45284527540206909" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="qXd-Za-VCv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Remove Ads">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeAds:" destination="gRj-gv-Wtj" eventType="touchUpInside" id="U0M-22-tcu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2c-kH-BJm">
+                                <rect key="frame" x="327" y="34" width="32" height="33"/>
+                                <state key="normal" image="soundIconLowQuality.png">
+                                    <color key="titleColor" red="0.24163410069999999" green="0.1137004122" blue="0.055845506490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SoundToggle:" destination="nof-ro-rhQ" eventType="touchUpInside" id="yi1-6k-uTx"/>
+                                    <action selector="ToggleSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3r-eb-PKJ"/>
+                                    <action selector="toggleSound:" destination="gRj-gv-Wtj" eventType="touchUpInside" id="uk8-yC-0H6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g83-NN-G8v">
+                                <rect key="frame" x="285" y="75" width="74" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96669834850000003" green="0.90504068140000005" blue="0.68253999949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                <state key="normal" title="Restore Purchases">
+                                    <color key="titleColor" red="0.40355058179999997" green="0.62183210960000002" blue="0.42505030490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restorePurchases:" destination="gRj-gv-Wtj" eventType="touchUpInside" id="Fin-S9-MNG"/>
+                                    <action selector="restorePurchases:" destination="JLh-ak-cuS" eventType="touchUpInside" id="ezT-vW-GE8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80687958002090454" green="0.87114745378494263" blue="0.56547778844833374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ljl-HF-OQP" firstAttribute="leading" secondItem="b2p-vE-JL6" secondAttribute="leading" id="1xc-iR-Zg3"/>
+                            <constraint firstItem="k3d-B3-fuu" firstAttribute="leading" secondItem="qQw-wV-Ecd" secondAttribute="leading" constant="117" id="30n-Fa-T3g"/>
+                            <constraint firstItem="q2c-kH-BJm" firstAttribute="leading" secondItem="ljl-HF-OQP" secondAttribute="trailing" constant="-48" id="3al-Ri-OxQ"/>
+                            <constraint firstItem="ljl-HF-OQP" firstAttribute="centerX" secondItem="372-q4-aSv" secondAttribute="centerX" id="8Oi-6p-vIM"/>
+                            <constraint firstItem="ljl-HF-OQP" firstAttribute="top" secondItem="b2p-vE-JL6" secondAttribute="top" id="9lm-6d-hmJ"/>
+                            <constraint firstItem="qQw-wV-Ecd" firstAttribute="bottom" secondItem="k3d-B3-fuu" secondAttribute="bottom" constant="7" id="Ehh-cL-aq4"/>
+                            <constraint firstItem="k3d-B3-fuu" firstAttribute="top" secondItem="6yA-mH-qpZ" secondAttribute="bottom" constant="8" symbolic="YES" id="IB1-Qq-WdD"/>
+                            <constraint firstItem="372-q4-aSv" firstAttribute="leading" secondItem="6yA-mH-qpZ" secondAttribute="leading" id="Mcg-Ux-7vI"/>
+                            <constraint firstItem="ljl-HF-OQP" firstAttribute="top" secondItem="q2c-kH-BJm" secondAttribute="bottom" constant="-67" id="QjP-Uo-dtx"/>
+                            <constraint firstItem="372-q4-aSv" firstAttribute="trailing" secondItem="6yA-mH-qpZ" secondAttribute="trailing" id="Ykp-Na-lVs"/>
+                            <constraint firstItem="372-q4-aSv" firstAttribute="leading" secondItem="qQw-wV-Ecd" secondAttribute="leading" constant="24" id="jfI-m4-QwV"/>
+                            <constraint firstItem="6yA-mH-qpZ" firstAttribute="top" secondItem="372-q4-aSv" secondAttribute="bottom" constant="8" symbolic="YES" id="lSU-d2-Kwq"/>
+                            <constraint firstAttribute="trailing" secondItem="ljl-HF-OQP" secondAttribute="trailing" id="oaS-LF-8vl"/>
+                            <constraint firstItem="ljl-HF-OQP" firstAttribute="bottom" secondItem="qQw-wV-Ecd" secondAttribute="bottom" id="vL9-hL-F1Q"/>
+                            <constraint firstItem="6yA-mH-qpZ" firstAttribute="centerX" secondItem="k3d-B3-fuu" secondAttribute="centerX" id="zLE-u2-3mc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qQw-wV-Ecd"/>
+                    </view>
+                    <connections>
+                        <outlet property="removeAdsButton" destination="k3d-B3-fuu" id="WSZ-52-EvB"/>
+                        <outlet property="restorePurchasesButton" destination="g83-NN-G8v" id="rX0-KX-9EW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmM-eW-SNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nof-ro-rhQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-836" y="485.30734632683664"/>
+        </scene>
+        <!--Instructions-->
+        <scene sceneID="t0W-or-f3Q">
+            <objects>
+                <viewController storyboardIdentifier="InstructionsID" id="JLh-ak-cuS" customClass="Instructions" customModule="Banana_Market_Remake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ap1-PQ-VvC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instructionsScreen2.png" translatesAutoresizingMaskIntoConstraints="NO" id="v91-iO-tpI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.81484037639999995" green="0.87510246039999995" blue="0.56512898209999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h1-qD-fhG">
+                                <rect key="frame" x="16" y="40" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="backButton.png"/>
+                                <connections>
+                                    <action selector="SoundToggle:" destination="nof-ro-rhQ" eventType="touchUpInside" id="zAd-P6-ZnR"/>
+                                    <action selector="ToggleSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jgl-1X-EI5"/>
+                                    <action selector="backButton:" destination="JLh-ak-cuS" eventType="touchUpInside" id="pJX-Rp-IAG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80687958002090454" green="0.87114745378494263" blue="0.56547778844833374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v91-iO-tpI" firstAttribute="leading" secondItem="ap1-PQ-VvC" secondAttribute="leading" id="AgY-xc-AKW"/>
+                            <constraint firstItem="v91-iO-tpI" firstAttribute="bottom" secondItem="Fwl-7Z-ePk" secondAttribute="bottom" id="BhA-2G-L4Q"/>
+                            <constraint firstAttribute="trailing" secondItem="v91-iO-tpI" secondAttribute="trailing" id="Pgm-0I-nXW"/>
+                            <constraint firstItem="v91-iO-tpI" firstAttribute="top" secondItem="ap1-PQ-VvC" secondAttribute="top" id="qzl-oM-vyH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fwl-7Z-ePk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tN-Cf-23u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762.39999999999998" y="-258.62068965517244"/>
+        </scene>
+        <!--Seven Days-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SevenDaysID" id="BYZ-38-t0r" customClass="SevenDays" customModule="Banana_Market_Remake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="7DaysNoDay.png" translatesAutoresizingMaskIntoConstraints="NO" id="dxB-av-fFN">
+                                <rect key="frame" x="0.0" y="7" width="375" height="640"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.81484037637710571" green="0.8751024603843689" blue="0.56512898206710815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="valueLabels7Day.png" translatesAutoresizingMaskIntoConstraints="NO" id="a8S-4A-ksu">
+                                <rect key="frame" x="51" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="7daysDayLabel.png" translatesAutoresizingMaskIntoConstraints="NO" id="xGJ-9Z-eZB">
+                                <rect key="frame" x="132" y="178" width="79" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5Z-93-eQd">
+                                <rect key="frame" x="144" y="442" width="86" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="holdButton.png">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="holdButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yig-sv-pV4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzR-tw-3Hh">
+                                <rect key="frame" x="286" y="280" width="46" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.40355058179999997" green="0.62183210960000002" blue="0.42505030490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uqq-aG-pby">
+                                <rect key="frame" x="69" y="405" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.46910517690149184" green="0.73313169158654767" blue="0.088383401277705095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.46873831748962402" green="0.3989226222038269" blue="0.082481108605861664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.46910517689999998" green="0.73313169160000002" blue="0.088383401279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GOv-hb-VOq"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0b-Td-58W">
+                                <rect key="frame" x="238" y="442" width="85.5" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="buyButton.png">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vQk-27-6l5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMO-5U-C0K">
+                                <rect key="frame" x="16" y="40" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="backButton.png"/>
+                                <connections>
+                                    <action selector="backButtonTS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sk1-24-vHG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPu-ue-My1">
+                                <rect key="frame" x="166" y="592" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="1" green="0.99738286040000002" blue="0.97509836480000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMc-F8-RT3">
+                                <rect key="frame" x="286" y="371" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.40355058179999997" green="0.62183210960000002" blue="0.42505030490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-rH-2Th">
+                                <rect key="frame" x="51" y="442" width="85" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sellButton.png">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sellButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nel-HC-zNM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FI-Kj-Wwn">
+                                <rect key="frame" x="191" y="178" width="60" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="top-Xt-v4O">
+                                <rect key="frame" x="327" y="39" width="32" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="soundIconLowQuality.png">
+                                    <color key="titleColor" red="0.24163410067558289" green="0.11370041221380234" blue="0.055845506489276886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SoundToggle:" destination="nof-ro-rhQ" eventType="touchUpInside" id="0pz-cp-aMP"/>
+                                    <action selector="ToggleSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s0o-EM-JpZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQg-aW-8e8">
+                                <rect key="frame" x="286" y="314" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.40355058179999997" green="0.62183210960000002" blue="0.42505030490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80687958002090454" green="0.87114745378494263" blue="0.56547778844833374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bananaPrice" destination="VzR-tw-3Hh" id="j3U-fN-ysV"/>
+                        <outlet property="bananaQuantity" destination="kQg-aW-8e8" id="xUy-mL-V3g"/>
+                        <outlet property="buyButton" destination="L0b-Td-58W" id="BeH-o0-3yn"/>
+                        <outlet property="dayNumber" destination="2FI-Kj-Wwn" id="rV3-mN-3SO"/>
+                        <outlet property="holdButton" destination="L5Z-93-eQd" id="BMg-7a-bJW"/>
+                        <outlet property="sellButton" destination="QBL-rH-2Th" id="m77-bP-2bX"/>
+                        <outlet property="sliderValue" destination="Uqq-aG-pby" id="WlP-ar-HRI"/>
+                        <outlet property="sliderValueLabel" destination="tMc-F8-RT3" id="sp1-RN-GeO"/>
+                        <outlet property="wallet" destination="NPu-ue-My1" id="DJV-rd-Pt4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58.399999999999999" y="147.97601199400302"/>
+        </scene>
+        <!--Unlimited-->
+        <scene sceneID="l8t-fG-Cl8">
+            <objects>
+                <viewController storyboardIdentifier="UnlimitedID" id="rFz-fu-2pP" customClass="Unlimited" customModule="Banana_Market_Remake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P1j-QU-t0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UnlimitedScreenNoDay.png" translatesAutoresizingMaskIntoConstraints="NO" id="bux-9O-zhu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="665"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82498544454574585" green="0.9418596625328064" blue="0.64991062879562378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="valueLabelsUnlimited.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fmh-wk-n4G">
+                                <rect key="frame" x="51" y="280" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unlimitedDayLabel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cw9-o0-c59">
+                                <rect key="frame" x="135" y="182" width="79" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFF-4i-Sy7">
+                                <rect key="frame" x="241" y="463" width="86" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="buyButton.png">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyButtonPressed:" destination="rFz-fu-2pP" eventType="touchUpInside" id="5h2-dL-I1w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVH-mZ-OfI">
+                                <rect key="frame" x="51" y="463" width="86" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sellButton.png">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sellButtonPressed:" destination="rFz-fu-2pP" eventType="touchUpInside" id="yec-Ek-Jho"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-sk-CWN">
+                                <rect key="frame" x="290" y="318" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="bW0-AY-Up5">
+                                <rect key="frame" x="75" y="416" width="243" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.73201435804367065" green="0.96118134260177612" blue="0.07131669670343399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.95454056389999997" blue="0.4746221947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.24163410067558289" green="0.11370041221380234" blue="0.055845506489276886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="1" green="0.95454056389999997" blue="0.4746221947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="rFz-fu-2pP" eventType="valueChanged" id="3xK-Zf-Eu0"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jg-KN-rCI">
+                                <rect key="frame" x="220" y="178" width="60" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.46910517689999998" green="0.73313169160000002" blue="0.088383401279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqH-YN-hcF">
+                                <rect key="frame" x="147" y="463" width="86" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="holdButton.png">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="holdButtonPressed:" destination="rFz-fu-2pP" eventType="touchUpInside" id="ECO-ZS-J2N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbl-fB-fGI">
+                                <rect key="frame" x="172" y="606" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n33-eh-Q1k">
+                                <rect key="frame" x="16" y="40" width="85" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="endGame.png">
+                                    <color key="titleColor" red="0.24163410067558289" green="0.11370041221380234" blue="0.055845506489276886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="endGame:" destination="rFz-fu-2pP" eventType="touchUpInside" id="2p3-hz-hYv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCc-nj-Kgd">
+                                <rect key="frame" x="327" y="40" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="soundIconLowQuality.png">
+                                    <color key="titleColor" red="0.24163410067558289" green="0.11370041221380234" blue="0.055845506489276886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SoundToggle:" destination="nof-ro-rhQ" eventType="touchUpInside" id="z9s-LK-rwz"/>
+                                    <action selector="ToggleSound:" destination="rFz-fu-2pP" eventType="touchUpInside" id="rVX-vg-SlJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SX-dF-uqv">
+                                <rect key="frame" x="290" y="380" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ist-Or-pJx">
+                                <rect key="frame" x="290" y="286" width="62" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82498544454574585" green="0.9418596625328064" blue="0.64991062879562378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="fv4-Y5-cB0"/>
+                    </view>
+                    <connections>
+                        <outlet property="bananaPrice" destination="ist-Or-pJx" id="TiV-Dt-iEy"/>
+                        <outlet property="bananaQuantity" destination="gL9-sk-CWN" id="SJ2-f1-IAx"/>
+                        <outlet property="buyButton" destination="fFF-4i-Sy7" id="eie-iC-NKu"/>
+                        <outlet property="dayNumber" destination="9Jg-KN-rCI" id="VA0-rB-fL3"/>
+                        <outlet property="holdButton" destination="hqH-YN-hcF" id="iOw-fa-3Kd"/>
+                        <outlet property="sellButton" destination="MVH-mZ-OfI" id="Nez-ko-0R2"/>
+                        <outlet property="sliderValue" destination="bW0-AY-Up5" id="MEs-kX-2aF"/>
+                        <outlet property="sliderValueLabel" destination="8SX-dF-uqv" id="lWv-Qe-6Cv"/>
+                        <outlet property="wallet" destination="pbl-fB-fGI" id="jzy-iW-U5L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4P-DK-NLz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58.399999999999999" y="865.81709145427294"/>
+        </scene>
+        <!--End View Controller Unlimited-->
+        <scene sceneID="4u5-eG-J6E">
+            <objects>
+                <viewController storyboardIdentifier="endGameUnlimited" id="myn-DE-2YY" customClass="EndViewControllerUnlimited" customModule="Banana_Market_Remake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EEn-fx-0xR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UnlimitedGameOverNoLabels.png" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-WP-qUo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.81484037637710571" green="0.8751024603843689" blue="0.56512898206710815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scoreUnlimited.png" translatesAutoresizingMaskIntoConstraints="NO" id="He7-mZ-S3r">
+                                <rect key="frame" x="106" y="313" width="93" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="P8d-nB-d3E"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaR-u2-zUl">
+                                <rect key="frame" x="201" y="350" width="94" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhy-bA-lIW">
+                                <rect key="frame" x="69" y="386" width="240" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="F9x-sK-cVP"/>
+                                </constraints>
+                                <state key="normal" image="twitterButton.png"/>
+                                <connections>
+                                    <action selector="twitterShare:" destination="myn-DE-2YY" eventType="touchUpInside" id="dKa-kB-8uB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFg-w8-YYN">
+                                <rect key="frame" x="16" y="40" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Main Menu" image="MenuButton.png"/>
+                                <connections>
+                                    <action selector="mainMenu:" destination="myn-DE-2YY" eventType="touchUpInside" id="6eu-EJ-Poy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNO-3q-ss5">
+                                <rect key="frame" x="67" y="508" width="240" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="haC-xf-ldJ"/>
+                                </constraints>
+                                <state key="normal" image="PlayAgainButtonBrown.png"/>
+                                <connections>
+                                    <action selector="restartGame:" destination="myn-DE-2YY" eventType="touchUpInside" id="c8L-z0-rAn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3o6-ER-JvW">
+                                <rect key="frame" x="201" y="303" width="41" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="U9P-qD-GuT"/>
+                                    <constraint firstAttribute="height" constant="47" id="ssG-Ps-0Cg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bananaLowQual.png" translatesAutoresizingMaskIntoConstraints="NO" id="7nX-35-apD">
+                                <rect key="frame" x="143" y="218" width="89" height="87"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eJ-XU-x5p">
+                                <rect key="frame" x="327" y="40" width="31" height="32"/>
+                                <state key="normal" image="forwardButton2.png"/>
+                                <connections>
+                                    <action selector="Credits:" destination="myn-DE-2YY" eventType="touchUpInside" id="vWc-Wr-NoU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZg-28-eMO">
+                                <rect key="frame" x="173" y="451" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="5Wp-i0-0xD"/>
+                                </constraints>
+                                <state key="normal" image="shareButtonBrown.png"/>
+                                <connections>
+                                    <action selector="brownShareButton:" destination="myn-DE-2YY" eventType="touchUpInside" id="Ma0-O3-WWA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82498544454574585" green="0.9418596625328064" blue="0.64991062879562378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JaR-u2-zUl" firstAttribute="leading" secondItem="He7-mZ-S3r" secondAttribute="trailing" constant="2" id="2JC-6d-nsA"/>
+                            <constraint firstItem="JaR-u2-zUl" firstAttribute="leading" secondItem="3o6-ER-JvW" secondAttribute="leading" id="3xo-Of-zkw"/>
+                            <constraint firstItem="g8h-Jx-Jow" firstAttribute="trailing" secondItem="JaR-u2-zUl" secondAttribute="trailing" constant="80" id="5tg-2j-WrW"/>
+                            <constraint firstItem="Mhy-bA-lIW" firstAttribute="centerX" secondItem="iBY-WP-qUo" secondAttribute="centerX" constant="1.5" id="CkV-zk-Xon"/>
+                            <constraint firstItem="3o6-ER-JvW" firstAttribute="top" secondItem="g8h-Jx-Jow" secondAttribute="top" constant="283" id="DRG-Ht-j1U"/>
+                            <constraint firstItem="7nX-35-apD" firstAttribute="centerX" secondItem="iBY-WP-qUo" secondAttribute="centerX" id="Eol-Ws-r2z"/>
+                            <constraint firstItem="g8h-Jx-Jow" firstAttribute="trailing" secondItem="3o6-ER-JvW" secondAttribute="trailing" constant="133" id="G8J-Ym-BYr"/>
+                            <constraint firstItem="iBY-WP-qUo" firstAttribute="top" secondItem="7nX-35-apD" secondAttribute="bottom" constant="-305" id="KhD-QE-zuJ"/>
+                            <constraint firstItem="eZg-28-eMO" firstAttribute="top" secondItem="Mhy-bA-lIW" secondAttribute="bottom" constant="3" id="NkM-6g-a3L"/>
+                            <constraint firstItem="8eJ-XU-x5p" firstAttribute="leading" secondItem="iBY-WP-qUo" secondAttribute="trailing" constant="-48" id="QFJ-zm-aWh"/>
+                            <constraint firstItem="iBY-WP-qUo" firstAttribute="top" secondItem="8eJ-XU-x5p" secondAttribute="bottom" constant="-72" id="SbM-Gh-QOU"/>
+                            <constraint firstItem="eZg-28-eMO" firstAttribute="centerX" secondItem="Mhy-bA-lIW" secondAttribute="centerX" id="WnH-Xr-Izp"/>
+                            <constraint firstItem="iBY-WP-qUo" firstAttribute="top" secondItem="EEn-fx-0xR" secondAttribute="top" id="WuE-n1-mTN"/>
+                            <constraint firstItem="He7-mZ-S3r" firstAttribute="leading" secondItem="g8h-Jx-Jow" secondAttribute="leading" constant="106" id="dAU-X2-zAH"/>
+                            <constraint firstItem="eZg-28-eMO" firstAttribute="leading" secondItem="g8h-Jx-Jow" secondAttribute="leading" constant="173" id="gfS-tg-DX1"/>
+                            <constraint firstItem="JaR-u2-zUl" firstAttribute="bottom" secondItem="He7-mZ-S3r" secondAttribute="bottom" id="h5n-AV-E8P"/>
+                            <constraint firstItem="Mhy-bA-lIW" firstAttribute="trailing" secondItem="rNO-3q-ss5" secondAttribute="trailing" constant="2" id="hTq-wD-fE2"/>
+                            <constraint firstAttribute="bottom" secondItem="rNO-3q-ss5" secondAttribute="bottom" constant="74" id="j0h-KU-OdQ"/>
+                            <constraint firstItem="Mhy-bA-lIW" firstAttribute="top" secondItem="He7-mZ-S3r" secondAttribute="bottom" constant="6" id="kMI-2z-FGp"/>
+                            <constraint firstItem="JaR-u2-zUl" firstAttribute="top" secondItem="3o6-ER-JvW" secondAttribute="bottom" id="pgR-37-xnm"/>
+                            <constraint firstItem="iBY-WP-qUo" firstAttribute="bottom" secondItem="g8h-Jx-Jow" secondAttribute="bottom" id="qGJ-fW-GaN"/>
+                            <constraint firstAttribute="trailing" secondItem="iBY-WP-qUo" secondAttribute="trailing" id="qng-XA-jG3"/>
+                            <constraint firstItem="iBY-WP-qUo" firstAttribute="leading" secondItem="EEn-fx-0xR" secondAttribute="leading" id="srG-DP-Rfw"/>
+                            <constraint firstItem="g8h-Jx-Jow" firstAttribute="trailing" secondItem="rNO-3q-ss5" secondAttribute="trailing" constant="68" id="ubM-Np-RE6"/>
+                            <constraint firstItem="rNO-3q-ss5" firstAttribute="leading" secondItem="g8h-Jx-Jow" secondAttribute="leading" constant="67" id="zJl-vn-gzO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g8h-Jx-Jow"/>
+                    </view>
+                    <connections>
+                        <outlet property="days" destination="3o6-ER-JvW" id="cno-y6-EkV"/>
+                        <outlet property="score" destination="JaR-u2-zUl" id="f2c-sc-5db"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69r-4a-tu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791.20000000000005" y="873.91304347826099"/>
+        </scene>
+        <!--End View Controller-->
+        <scene sceneID="ig4-ma-ZIj">
+            <objects>
+                <viewController storyboardIdentifier="endGameSevenDays" id="zog-gT-XXT" customClass="EndViewController" customModule="Banana_Market_Remake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jiH-qu-Kel">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7DaysScreenNoLabels.png" translatesAutoresizingMaskIntoConstraints="NO" id="7F2-WG-wjv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.82498544454574585" green="0.9418596625328064" blue="0.64991062879562378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scoreLabels7Day.png" translatesAutoresizingMaskIntoConstraints="NO" id="wdb-r9-376">
+                                <rect key="frame" x="76" y="316" width="144" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIC-lf-SFB">
+                                <rect key="frame" x="228" y="356" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p87-vL-oxt">
+                                <rect key="frame" x="16" y="40" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="MenuOrangeButton.png"/>
+                                <connections>
+                                    <action selector="mainMenu:" destination="zog-gT-XXT" eventType="touchUpInside" id="Fsw-vq-at2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bananaLowQual.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZYW-Og-a4p">
+                                <rect key="frame" x="144" y="229" width="89" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kY-NP-mJU">
+                                <rect key="frame" x="228" y="318" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaE-m7-llt">
+                                <rect key="frame" x="327" y="40" width="32" height="32"/>
+                                <state key="normal" image="ForwardOrangeButtonLowQuality.png"/>
+                                <connections>
+                                    <action selector="Credits:" destination="zog-gT-XXT" eventType="touchUpInside" id="NNv-Yg-u7V"/>
+                                    <action selector="Credits:" destination="XxY-qS-yRM" eventType="touchUpInside" id="XNr-RQ-CJw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riL-nm-g1U">
+                                <rect key="frame" x="69" y="390" width="240" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="twitterButton.png"/>
+                                <connections>
+                                    <action selector="twitterShare:" destination="zog-gT-XXT" eventType="touchUpInside" id="2sS-sh-hbf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMp-4R-Vsc">
+                                <rect key="frame" x="67" y="508" width="241" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="l2l-Kv-lZC"/>
+                                </constraints>
+                                <state key="normal" image="PlayAgainGreenButton.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="VEd-ex-UiA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCm-hJ-tGN">
+                                <rect key="frame" x="173" y="450" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Share button.png"/>
+                                <connections>
+                                    <action selector="orangeShareButton:" destination="zog-gT-XXT" eventType="touchUpInside" id="lZm-ph-W5d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80687958002090454" green="0.87114745378494263" blue="0.56547778844833374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cMp-4R-Vsc" firstAttribute="leading" secondItem="yPF-8v-C6M" secondAttribute="leading" constant="67" id="EP6-JF-ALJ"/>
+                            <constraint firstItem="AaE-m7-llt" firstAttribute="leading" secondItem="7F2-WG-wjv" secondAttribute="trailing" constant="-48" id="Jzf-MA-kws"/>
+                            <constraint firstItem="7F2-WG-wjv" firstAttribute="top" secondItem="AaE-m7-llt" secondAttribute="bottom" constant="-72" id="KQT-ac-HgA"/>
+                            <constraint firstItem="cMp-4R-Vsc" firstAttribute="centerX" secondItem="7F2-WG-wjv" secondAttribute="centerX" id="PYs-Wh-ahs"/>
+                            <constraint firstItem="7F2-WG-wjv" firstAttribute="leading" secondItem="jiH-qu-Kel" secondAttribute="leading" id="TW7-Uz-ltF"/>
+                            <constraint firstItem="yPF-8v-C6M" firstAttribute="bottom" secondItem="cMp-4R-Vsc" secondAttribute="bottom" constant="74" id="TbI-gf-FgJ"/>
+                            <constraint firstAttribute="trailing" secondItem="7F2-WG-wjv" secondAttribute="trailing" id="k7I-r6-xdg"/>
+                            <constraint firstItem="7F2-WG-wjv" firstAttribute="top" secondItem="jiH-qu-Kel" secondAttribute="top" id="odM-gI-Vmr"/>
+                            <constraint firstItem="7F2-WG-wjv" firstAttribute="bottom" secondItem="yPF-8v-C6M" secondAttribute="bottom" id="qRW-oj-ZoJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yPF-8v-C6M"/>
+                    </view>
+                    <connections>
+                        <outlet property="highScore" destination="nIC-lf-SFB" id="ZZD-bb-71z"/>
+                        <outlet property="score" destination="6kY-NP-mJU" id="Tlu-kN-8Ld"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyY-af-hRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="XxY-qS-yRM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="148.87556221889056"/>
+        </scene>
+        <!--Credits-->
+        <scene sceneID="Y9k-Ai-07b">
+            <objects>
+                <viewController storyboardIdentifier="CreditsScreen" id="d6g-Mn-Oxn" customClass="Credits" customModule="Banana_Market_Remake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NMc-jm-5jl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CreditsScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="ylh-vm-CVg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.81484037637710571" green="0.8751024603843689" blue="0.56512898206710815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-ew-LAG">
+                                <rect key="frame" x="85" y="397" width="205" height="73"/>
+                                <state key="normal" image="returnTSButton.png"/>
+                                <connections>
+                                    <action selector="resetGame:" destination="d6g-Mn-Oxn" eventType="touchUpInside" id="kAg-0Z-Nzr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lead Developer:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xik-61-4EX">
+                                <rect key="frame" x="29" y="175" width="317" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.40355058184330006" green="0.62183210964735391" blue="0.42505030488699641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.46910517689999998" green="0.73313169160000002" blue="0.088383401279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LittleCreditsText.png" translatesAutoresizingMaskIntoConstraints="NO" id="XLf-v3-EKg">
+                                <rect key="frame" x="81" y="297" width="213" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="qjH-UK-d6v"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUL-VF-sXC">
+                                <rect key="frame" x="16" y="40" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="backButton.png"/>
+                                <connections>
+                                    <action selector="backButton:" destination="d6g-Mn-Oxn" eventType="touchUpInside" id="XmS-NQ-uqB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zac Thamer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny2-Og-Gmf">
+                                <rect key="frame" x="71.5" y="213" width="232" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.40355058179999997" green="0.62183210960000002" blue="0.42505030490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80687958002090454" green="0.87114745378494263" blue="0.56547778844833374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XLf-v3-EKg" firstAttribute="centerX" secondItem="ylh-vm-CVg" secondAttribute="centerX" id="11D-sW-fBD"/>
+                            <constraint firstItem="xik-61-4EX" firstAttribute="centerX" secondItem="ylh-vm-CVg" secondAttribute="centerX" id="1TA-E8-Si1"/>
+                            <constraint firstItem="C8x-So-cmc" firstAttribute="bottom" secondItem="mfs-ew-LAG" secondAttribute="bottom" constant="197" id="2Tg-iq-fMA"/>
+                            <constraint firstItem="ylh-vm-CVg" firstAttribute="centerY" secondItem="XLf-v3-EKg" secondAttribute="centerY" id="DZT-Fn-jbi"/>
+                            <constraint firstItem="mfs-ew-LAG" firstAttribute="top" secondItem="XLf-v3-EKg" secondAttribute="bottom" constant="27" id="Of8-hX-RpG"/>
+                            <constraint firstItem="ylh-vm-CVg" firstAttribute="bottom" secondItem="C8x-So-cmc" secondAttribute="bottom" id="RaV-BZ-OIG"/>
+                            <constraint firstItem="xik-61-4EX" firstAttribute="leading" secondItem="C8x-So-cmc" secondAttribute="leading" constant="29" id="TLD-Ry-73a"/>
+                            <constraint firstItem="ylh-vm-CVg" firstAttribute="leading" secondItem="NMc-jm-5jl" secondAttribute="leading" id="UFG-q2-SOM"/>
+                            <constraint firstItem="mfs-ew-LAG" firstAttribute="centerX" secondItem="ylh-vm-CVg" secondAttribute="centerX" id="VNQ-IA-JwF"/>
+                            <constraint firstItem="XLf-v3-EKg" firstAttribute="top" secondItem="ny2-Og-Gmf" secondAttribute="bottom" constant="30" id="WCN-wK-3tu"/>
+                            <constraint firstAttribute="trailing" secondItem="ylh-vm-CVg" secondAttribute="trailing" id="d5L-6B-zSL"/>
+                            <constraint firstItem="xik-61-4EX" firstAttribute="centerX" secondItem="ny2-Og-Gmf" secondAttribute="centerX" id="nsf-hV-c3J"/>
+                            <constraint firstItem="ny2-Og-Gmf" firstAttribute="top" secondItem="xik-61-4EX" secondAttribute="bottom" constant="8" id="ovj-lM-nxy"/>
+                            <constraint firstItem="XLf-v3-EKg" firstAttribute="leading" secondItem="C8x-So-cmc" secondAttribute="leading" constant="81" id="rEn-zr-8Nd"/>
+                            <constraint firstItem="mfs-ew-LAG" firstAttribute="leading" secondItem="C8x-So-cmc" secondAttribute="leading" constant="85" id="upd-wv-nF2"/>
+                            <constraint firstItem="ylh-vm-CVg" firstAttribute="top" secondItem="NMc-jm-5jl" secondAttribute="top" id="vgQ-SY-Cet"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C8x-So-cmc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9Q-QF-55c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="452.92353823088462"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="002.png" width="87" height="90"/>
+        <image name="7DayButtonScreen1.png" width="697" height="145"/>
+        <image name="7DaysNoDay.png" width="1242" height="2208"/>
+        <image name="7DaysScreenNoLabels.png" width="1242" height="2208"/>
+        <image name="7daysDayLabel.png" width="171" height="69"/>
+        <image name="CreditsScreen.png" width="1242" height="2208"/>
+        <image name="ForwardOrangeButtonLowQuality.png" width="32" height="33"/>
+        <image name="LittleCreditsText.png" width="1017" height="333"/>
+        <image name="MenuButton.png" width="146" height="149"/>
+        <image name="MenuOrangeButton.png" width="146" height="149"/>
+        <image name="PlayAgainButtonBrown.png" width="648" height="191"/>
+        <image name="PlayAgainGreenButton.png" width="670" height="213"/>
+        <image name="Screen1.png" width="1242" height="2208"/>
+        <image name="Share button.png" width="180" height="180"/>
+        <image name="UnlimitedButton.png" width="876" height="181"/>
+        <image name="UnlimitedGameOverNoLabels.png" width="1242" height="2208"/>
+        <image name="UnlimitedScreenNoDay.png" width="1242" height="2208"/>
+        <image name="backButton.png" width="81" height="84"/>
+        <image name="bananaLowQual.png" width="21.360000610351562" height="17.760000228881836"/>
+        <image name="buyButton.png" width="250" height="91"/>
+        <image name="endGame.png" width="259" height="84"/>
+        <image name="forwardButton2.png" width="31" height="32"/>
+        <image name="holdButton.png" width="250" height="90"/>
+        <image name="instructionsScreen2.png" width="1242" height="2208"/>
+        <image name="returnTSButton.png" width="712" height="226"/>
+        <image name="scoreLabels7Day.png" width="323.25" height="146.25"/>
+        <image name="scoreUnlimited.png" width="216" height="139.5"/>
+        <image name="sellButton.png" width="250" height="91"/>
+        <image name="shareButtonBrown.png" width="180" height="181"/>
+        <image name="soundIconLowQuality.png" width="32" height="33"/>
+        <image name="twitterButton.png" width="726" height="144"/>
+        <image name="unlimitedDayLabel.png" width="165" height="63"/>
+        <image name="valueLabels7Day.png" width="538.5" height="286.5"/>
+        <image name="valueLabelsUnlimited.png" width="531" height="285.75"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yIg-uZ-bZJ"/>
+    </inferredMetricsTieBreakers>
+</document>
